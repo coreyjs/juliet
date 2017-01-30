@@ -1,0 +1,6 @@
+framework module Pods_JulietTests {
+  umbrella header "Pods-JulietTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
