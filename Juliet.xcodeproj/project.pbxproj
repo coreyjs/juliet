@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		597250A52DDED4AF1FDF7410 /* Pods_JulietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F4AF58257C7FACBB634D30 /* Pods_JulietTests.framework */; };
+		C155AF851E404083008D321A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C155AF841E404083008D321A /* Logger.swift */; };
 		C1F8EE301E3FEB2100C7FCE0 /* Juliet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F8EE261E3FEB2000C7FCE0 /* Juliet.framework */; };
 		C1F8EE351E3FEB2100C7FCE0 /* JulietTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8EE341E3FEB2100C7FCE0 /* JulietTests.swift */; };
 		C1F8EE371E3FEB2100C7FCE0 /* Juliet.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +31,7 @@
 		5226B4EE828D23BB74041048 /* Pods-JulietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JulietTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JulietTests/Pods-JulietTests.release.xcconfig"; sourceTree = "<group>"; };
 		53F4AF58257C7FACBB634D30 /* Pods_JulietTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JulietTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8422C47AF643C5E703D56B8A /* Pods-Juliet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juliet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Juliet/Pods-Juliet.release.xcconfig"; sourceTree = "<group>"; };
+		C155AF841E404083008D321A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C1F8EE261E3FEB2000C7FCE0 /* Juliet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Juliet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Juliet.h; sourceTree = "<group>"; };
 		C1F8EE2A1E3FEB2000C7FCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */,
 				C1F8EE2A1E3FEB2000C7FCE0 /* Info.plist */,
+				C155AF841E404083008D321A /* Logger.swift */,
 			);
 			path = Juliet;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				TargetAttributes = {
 					C1F8EE251E3FEB2000C7FCE0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					C1F8EE2E1E3FEB2100C7FCE0 = {
@@ -311,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C155AF851E404083008D321A /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41E577083218BA139EECE6A4 /* Pods-Juliet.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -447,6 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rougebit.Juliet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -455,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8422C47AF643C5E703D56B8A /* Pods-Juliet.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -474,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B49991879269D9918252BD3 /* Pods-JulietTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JulietTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rougebit.JulietTests;
@@ -486,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5226B4EE828D23BB74041048 /* Pods-JulietTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JulietTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rougebit.JulietTests;
@@ -513,6 +523,7 @@
 				C1F8EE3C1E3FEB2100C7FCE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1F8EE3D1E3FEB2100C7FCE0 /* Build configuration list for PBXNativeTarget "JulietTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +532,7 @@
 				C1F8EE3F1E3FEB2100C7FCE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
