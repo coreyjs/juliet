@@ -4,6 +4,9 @@
 
 A simple logging framework for iOS
 
+iOS 10+
+
+Swift 3.1 +
 
 ---
 

@@ -58,6 +58,25 @@ enum LogLevel : LoggableLevel {
     case fatal
 }
 
+extension LogLevel : CustomStringConvertible {
+    public var description : String {
+        switch self {
+        case .noerror:
+            return "NoError"
+        case .warning:
+            return "Warning"
+        case .alert:
+            return "Alert"
+        case .error:
+            return "Error"
+        case .fatal:
+            return "Fatal"
+        default:
+            return "NA"
+        }
+    }
+}
+
 enum ExportFormat {
     case json
     case xml

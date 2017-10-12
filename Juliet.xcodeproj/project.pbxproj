@@ -11,6 +11,7 @@
 		C155AF851E404083008D321A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C155AF841E404083008D321A /* Logger.swift */; };
 		C1AABA051F8EE8B400FFF36B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AABA041F8EE8B400FFF36B /* Configuration.swift */; };
 		C1AABA071F8EF4A600FFF36B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AABA061F8EF4A600FFF36B /* Router.swift */; };
+		C1AABA091F8EFFF200FFF36B /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AABA081F8EFFF200FFF36B /* Composer.swift */; };
 		C1F8EE301E3FEB2100C7FCE0 /* Juliet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F8EE261E3FEB2000C7FCE0 /* Juliet.framework */; };
 		C1F8EE351E3FEB2100C7FCE0 /* JulietTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8EE341E3FEB2100C7FCE0 /* JulietTests.swift */; };
 		C1F8EE371E3FEB2100C7FCE0 /* Juliet.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 		C155AF841E404083008D321A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C1AABA041F8EE8B400FFF36B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		C1AABA061F8EF4A600FFF36B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C1AABA081F8EFFF200FFF36B /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 		C1F8EE261E3FEB2000C7FCE0 /* Juliet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Juliet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Juliet.h; sourceTree = "<group>"; };
 		C1F8EE2A1E3FEB2000C7FCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C155AF841E404083008D321A /* Logger.swift */,
 				C1AABA041F8EE8B400FFF36B /* Configuration.swift */,
 				C1AABA061F8EF4A600FFF36B /* Router.swift */,
+				C1AABA081F8EFFF200FFF36B /* Composer.swift */,
 			);
 			path = Juliet;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AABA051F8EE8B400FFF36B /* Configuration.swift in Sources */,
+				C1AABA091F8EFFF200FFF36B /* Composer.swift in Sources */,
 				C1AABA071F8EF4A600FFF36B /* Router.swift in Sources */,
 				C155AF851E404083008D321A /* Logger.swift in Sources */,
 			);
