@@ -1,5 +1,9 @@
 # Juliet (Not in working state yet)
+
+[![Build Status](https://travis-ci.org/corey-rb/juliet.svg?branch=master)](https://travis-ci.org/corey-rb/juliet)
+
 A simple logging framework for iOS
+
 
 ---
 
