@@ -34,12 +34,16 @@ struct Configuration : Configurable {
     
     var levels : [LogLevel]
     
-    public init() {
-        levels = [LogLevel.noerror, LogLevel.warning, LogLevel.alert, LogLevel.error, LogLevel.fatal]
-        self.postInitalize()
+    var exportFormat : ExportFormat
+    
+    private init() {
+        levels =  [LogLevel.noerror, LogLevel.warning, LogLevel.alert, LogLevel.error, LogLevel.fatal]
+        exportFormat = .json
     }
     
-    func postInitalize() {
+    init(format : ExportFormat) {
+        self.init()
+        self.exportFormat = format
     }
 }
 
@@ -52,5 +56,10 @@ enum LogLevel : LoggableLevel {
     case alert
     case error
     case fatal
+}
+
+enum ExportFormat {
+    case json
+    case xml
 }
 

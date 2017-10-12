@@ -22,12 +22,33 @@
 
 import Foundation
 
-open class Logger{
+open class Logger {
     
     var configuration : Configuration
     
+    var router : Router
+    
     init(){
-        configuration = Configuration()
+        configuration = Configuration(format: .json)
+    }
+    
+    // this would print out each level
+    // to its corresponding router
+    func log(level : LogLevel, message : String) {
+        switch level {
+        case .noerror:
+            print()
+        case .alert:
+            print("Alert: \(message)")
+        case .warning:
+            print("Warning \(message)")
+        case .error:
+            print("")
+        case .fatal:
+            print("")
+        default:
+            print("")
+        }
     }
     
 }
