@@ -14,19 +14,4 @@ open class Logger{
         
     }
     
-    private var toConsole : Bool = true
-    
-    public enum LogLevel : Int {
-        case Verbose = 0
-        case Debug = 1
-        case Info = 2
-        case Fatal = 3
-    }
-    
-    public func log(level : LogLevel, message : String) -> () {
-        if(self.toConsole){
-            print("\(level) : \(message)")
-        }
-    }
-    
 }
