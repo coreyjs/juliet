@@ -40,9 +40,7 @@ struct Configuration : Configurable {
     }
     
     func postInitalize() {
-        
     }
-    
 }
 
 protocol LoggableLevel {
