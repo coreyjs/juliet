@@ -4,7 +4,7 @@
 
 A simple logging framework for iOS
 
-iOS 10+
+iOS 10.3+
 
 Swift 3.1 +
 
@@ -23,3 +23,5 @@ Add import declaration
 ```swift
  import Juliet
 ```
+
+Juliet can log messages if a varity of ways, but deaults to the console.
