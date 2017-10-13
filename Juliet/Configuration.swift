@@ -26,6 +26,8 @@ protocol Configurable {
     
     var levels : [LogLevel] { get set }
     
+    var composer : OutputComposer { get set }
+    
     //@objc optional func postInitalize()
     
 }
@@ -36,14 +38,18 @@ struct Configuration : Configurable {
     
     var exportFormat : ExportFormat
     
+    var composer : OutputComposer
+    
     private init() {
         levels =  [LogLevel.noerror, LogLevel.warning, LogLevel.alert, LogLevel.error, LogLevel.fatal]
         exportFormat = .json
+        composer = ConsoleComposer()
     }
     
-    init(format : ExportFormat) {
+    init(format : ExportFormat, composer : OutputComposer) {
         self.init()
         self.exportFormat = format
+        self.composer = composer
     }
 }
 

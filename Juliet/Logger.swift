@@ -28,12 +28,12 @@ open class Logger {
     
     var router : Router
     
-    var composer : OutputComposer
+    private var composer : OutputComposer
     
     init() {
-        configuration = Configuration(format: .json)
-        router = Router()
-        composer = ConsoleComposer()
+        self.configuration = Configuration(format: .json, composer: ConsoleComposer())
+        self.router = Router()
+        self.composer = self.configuration.composer
     }
     
     // this would print out each level
