@@ -22,6 +22,6 @@
 
 import Foundation
 
-class Router {
+internal class Router {
     
 }
