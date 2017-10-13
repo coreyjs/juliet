@@ -41,17 +41,17 @@ open class Logger {
     func log(level : LogLevel, message : String) {
         switch level {
         case .noerror:
-            print()
+            self.composer.log()
         case .alert:
-            print("Alert: \(message)")
+            self.composer.log()
         case .warning:
-            print("Warning \(message)")
+            self.composer.log()
         case .error:
-            print("")
+            self.composer.log()
         case .fatal:
-            print("")
+            self.composer.log()
         default:
-            print("")
+            self.composer.log()
         }
     }
     
