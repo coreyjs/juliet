@@ -23,13 +23,21 @@
 import Foundation
 
 public protocol OutputComposer {
-    
+    func log(logMessage : String)
 }
 
 open class ConsoleComposer : OutputComposer {
     
+    public func log(logMessage : String) {
+        print("\u{001B}[0;35m\(logMessage)")
+    }
+    
 }
 
 open class HttpComposer : OutputComposer {
+    
+    public func log(logMessage : String) {
+        
+    }
     
 }

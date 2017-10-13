@@ -41,17 +41,32 @@ open class Logger {
     func log(level : LogLevel, message : String) {
         switch level {
         case .noerror:
-            print()
+            guard self.configuration.levels.contains(.noerror) else {
+                return
+            }
+            self.composer.log(logMessage: message)
         case .alert:
-            print("Alert: \(message)")
+            guard self.configuration.levels.contains(.alert) else {
+                return
+            }
+            self.composer.log(logMessage: message)
         case .warning:
-            print("Warning \(message)")
+            guard self.configuration.levels.contains(.warning) else {
+                return
+            }
+            self.composer.log(logMessage: message)
         case .error:
-            print("")
+            guard self.configuration.levels.contains(.error) else {
+                return
+            }
+            self.composer.log(logMessage: message)
         case .fatal:
-            print("")
+            guard self.configuration.levels.contains(.fatal) else {
+                return
+            }
+            self.composer.log(logMessage: message)
         default:
-            print("")
+            self.composer.log(logMessage: "No level supplied: \(message)")
         }
     }
     
