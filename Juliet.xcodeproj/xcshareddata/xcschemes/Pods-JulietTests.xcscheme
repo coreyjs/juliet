@@ -17,7 +17,7 @@
                BlueprintIdentifier = "253792A0D906DF767989E4DE3F36BCB7"
                BuildableName = "Pods_JulietTests.framework"
                BlueprintName = "Pods-JulietTests"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
             BlueprintIdentifier = "253792A0D906DF767989E4DE3F36BCB7"
             BuildableName = "Pods_JulietTests.framework"
             BlueprintName = "Pods-JulietTests"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "253792A0D906DF767989E4DE3F36BCB7"
             BuildableName = "Pods_JulietTests.framework"
             BlueprintName = "Pods-JulietTests"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
