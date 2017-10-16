@@ -43,14 +43,16 @@ open class Logger {
         default:
             self.composer = ConsoleComposer()
         }
-        
-        self.current = self
     }
-
     
     // this would print out each level
     // to its corresponding router
     func log(level : LogLevel, message : String) {
+        
+        guard self.enabled else {
+            return
+        }
+        
         switch level {
         case .noerror:
             guard self.configuration.levels.contains(.noerror) else {
