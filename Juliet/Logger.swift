@@ -24,17 +24,29 @@ import Foundation
 
 open class Logger {
     
-    var configuration : Configuration
+    open var enabled : Bool = true
+    
+    open var configuration : Configurable
     
     var router : Router
     
     private var composer : OutputComposer
     
-    init() {
-        self.configuration = Configuration(format: .json, composer: ConsoleComposer())
+    public init(configuration : Configurable) {
+        self.configuration = configuration
         self.router = Router()
-        self.composer = self.configuration.composer
+        switch configuration.composerType {
+        case .console:
+            self.composer = ConsoleComposer()
+        case .http:
+            self.composer = HttpComposer()
+        default:
+            self.composer = ConsoleComposer()
+        }
+        
+        self.current = self
     }
+
     
     // this would print out each level
     // to its corresponding router

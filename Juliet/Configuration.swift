@@ -22,41 +22,47 @@
 
 import Foundation
 
-protocol Configurable {
+public protocol Configurable {
     
     var levels : [LogLevel] { get set }
     
-    var composer : OutputComposer { get set }
+    var composerType : ComposerType { get set }
     
     //@objc optional func postInitalize()
     
 }
 
-struct Configuration : Configurable {
+public struct Configuration : Configurable {
     
-    var levels : [LogLevel]
+    public var levels : [LogLevel]
     
-    var exportFormat : ExportFormat
+    public var exportFormat : ExportFormat
     
-    var composer : OutputComposer
+    public var composerType : ComposerType
+    
     
     private init() {
-        levels =  [LogLevel.noerror, LogLevel.warning, LogLevel.alert, LogLevel.error, LogLevel.fatal]
-        exportFormat = .json
-        composer = ConsoleComposer()
+        self.levels =  [LogLevel.noerror, LogLevel.warning, LogLevel.alert, LogLevel.error, LogLevel.fatal]
+        self.exportFormat = .json
+        self.composerType = .console
     }
     
-    init(format : ExportFormat, composer : OutputComposer) {
-        self.init()
-        self.exportFormat = format
-        self.composer = composer
+    public init(logLevels : [LogLevel], composer : ComposerType) {
+        self.exportFormat = .json
+        self.composerType = composer
+        self.levels = logLevels
     }
 }
 
-protocol LoggableLevel {
+public enum ComposerType {
+    case console
+    case http
 }
 
-enum LogLevel : LoggableLevel {
+public protocol LoggableLevel {
+}
+
+public enum LogLevel : LoggableLevel {
     case noerror
     case warning
     case alert
@@ -83,7 +89,7 @@ extension LogLevel : CustomStringConvertible {
     }
 }
 
-enum ExportFormat {
+public enum ExportFormat {
     case json
     case xml
 }
