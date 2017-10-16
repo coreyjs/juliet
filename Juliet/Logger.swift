@@ -24,21 +24,35 @@ import Foundation
 
 open class Logger {
     
-    var configuration : Configuration
+    open var enabled : Bool = true
+    
+    open var configuration : Configurable
     
     var router : Router
     
     private var composer : OutputComposer
     
-    init() {
-        self.configuration = Configuration(format: .json, composer: ConsoleComposer())
+    public init(configuration : Configurable) {
+        self.configuration = configuration
         self.router = Router()
-        self.composer = self.configuration.composer
+        switch configuration.composerType {
+        case .console:
+            self.composer = ConsoleComposer()
+        case .http:
+            self.composer = HttpComposer()
+        default:
+            self.composer = ConsoleComposer()
+        }
     }
     
     // this would print out each level
     // to its corresponding router
-    func log(level : LogLevel, message : String) {
+    public func log(level : LogLevel, message : String) {
+        
+        guard self.enabled else {
+            return
+        }
+        
         switch level {
         case .noerror:
             guard self.configuration.levels.contains(.noerror) else {
@@ -54,7 +68,7 @@ open class Logger {
             guard self.configuration.levels.contains(.warning) else {
                 return
             }
-            self.composer.log(logMessage: message)
+            self.composer.logWarning(logMessage: message)
         case .error:
             guard self.configuration.levels.contains(.error) else {
                 return
