@@ -1,6 +1,8 @@
 # Juliet (Not in working state yet)
 
 [![Build Status](https://travis-ci.org/corey-rb/juliet.svg?branch=master)](https://travis-ci.org/corey-rb/juliet)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Juliet.svg)](https://img.shields.io/cocoapods/v/Juliet.svg)
+[![Platform](https://img.shields.io/cocoapods/p/Juliet.svg?style=flat)](http://cocoadocs.org/docsets/Juliet)
 
 A simple logging framework for iOS
 
