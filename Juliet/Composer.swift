@@ -24,20 +24,29 @@ import Foundation
 
 public protocol OutputComposer {
     func log(logMessage : String)
+    func logWarning(logMessage : String)
 }
 
 open class ConsoleComposer : OutputComposer {
     
+    private let linePrefix : String = "Juliet: "
+    
     public func log(logMessage : String) {
-        print("\u{001B}[0;35m\(logMessage)")
+        print("\(linePrefix) \(logMessage)")
     }
     
+    public func logWarning(logMessage : String) {
+        let log = "WARNING - \(logMessage)"
+        self.log(logMessage: log)
+    }
 }
 
 open class HttpComposer : OutputComposer {
     
     public func log(logMessage : String) {
-        
+    }
+    
+    public func logWarning(logMessage: String) {
     }
     
 }

@@ -47,7 +47,7 @@ open class Logger {
     
     // this would print out each level
     // to its corresponding router
-    func log(level : LogLevel, message : String) {
+    public func log(level : LogLevel, message : String) {
         
         guard self.enabled else {
             return
@@ -68,7 +68,7 @@ open class Logger {
             guard self.configuration.levels.contains(.warning) else {
                 return
             }
-            self.composer.log(logMessage: message)
+            self.composer.logWarning(logMessage: message)
         case .error:
             guard self.configuration.levels.contains(.error) else {
                 return
