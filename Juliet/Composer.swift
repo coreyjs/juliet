@@ -25,6 +25,10 @@ import Foundation
 public protocol OutputComposer {
     func log(logMessage : String)
     func logWarning(logMessage : String)
+    func logNoError(logMessage : String)
+    func logAlert(logMessage : String)
+    func logError(logMessage : String)
+    func logFatal(logMessage : String)
 }
 
 open class ConsoleComposer : OutputComposer {
