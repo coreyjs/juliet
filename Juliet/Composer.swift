@@ -25,6 +25,10 @@ import Foundation
 public protocol OutputComposer {
     func log(logMessage : String)
     func logWarning(logMessage : String)
+    func logNoError(logMessage : String)
+    func logAlert(logMessage : String)
+    func logError(logMessage : String)
+    func logFatal(logMessage : String)
 }
 
 open class ConsoleComposer : OutputComposer {
@@ -39,6 +43,26 @@ open class ConsoleComposer : OutputComposer {
         let log = "WARNING - \(logMessage)"
         self.log(logMessage: log)
     }
+    
+    public func logNoError(logMessage: String) {
+        let log = "NOERROR - \(logMessage)"
+        self.log(logMessage: log)
+    }
+    
+    public func logAlert(logMessage: String) {
+        let log = "ALERT - \(logMessage)"
+        self.log(logMessage: log)
+    }
+    
+    public func logError(logMessage: String) {
+        let log = "ERROR - \(logMessage)"
+        self.log(logMessage: log)
+    }
+    
+    public func logFatal(logMessage: String) {
+        let log = "FATAL - \(logMessage)"
+        self.log(logMessage: log)
+    }
 }
 
 open class HttpComposer : OutputComposer {
@@ -47,6 +71,22 @@ open class HttpComposer : OutputComposer {
     }
     
     public func logWarning(logMessage: String) {
+    }
+    
+    public func logNoError(logMessage : String) {
+        
+    }
+    
+    public func logAlert(logMessage : String) {
+        
+    }
+    
+    public func logError(logMessage : String) {
+        
+    }
+    
+    public func logFatal(logMessage : String) {
+        
     }
     
 }
