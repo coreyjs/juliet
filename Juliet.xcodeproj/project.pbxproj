@@ -13,7 +13,7 @@
 		C1AABA071F8EF4A600FFF36B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AABA061F8EF4A600FFF36B /* Router.swift */; };
 		C1AABA091F8EFFF200FFF36B /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AABA081F8EFFF200FFF36B /* Composer.swift */; };
 		C1F8EE301E3FEB2100C7FCE0 /* Juliet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F8EE261E3FEB2000C7FCE0 /* Juliet.framework */; };
-		C1F8EE351E3FEB2100C7FCE0 /* JulietTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8EE341E3FEB2100C7FCE0 /* JulietTests.swift */; };
+		C1F8EE351E3FEB2100C7FCE0 /* JulietSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8EE341E3FEB2100C7FCE0 /* JulietSpecs.swift */; };
 		C1F8EE371E3FEB2100C7FCE0 /* Juliet.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAF970681FCDF60CDEE57730 /* Pods_Juliet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D015CBFFDF94FF966C0BCE7D /* Pods_Juliet.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,7 @@
 		C1F8EE291E3FEB2000C7FCE0 /* Juliet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Juliet.h; sourceTree = "<group>"; };
 		C1F8EE2A1E3FEB2000C7FCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1F8EE2F1E3FEB2100C7FCE0 /* JulietTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JulietTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1F8EE341E3FEB2100C7FCE0 /* JulietTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulietTests.swift; sourceTree = "<group>"; };
+		C1F8EE341E3FEB2100C7FCE0 /* JulietSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulietSpecs.swift; sourceTree = "<group>"; };
 		C1F8EE361E3FEB2100C7FCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D015CBFFDF94FF966C0BCE7D /* Pods_Juliet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Juliet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 		C1F8EE331E3FEB2100C7FCE0 /* JulietTests */ = {
 			isa = PBXGroup;
 			children = (
-				C1F8EE341E3FEB2100C7FCE0 /* JulietTests.swift */,
+				C1F8EE341E3FEB2100C7FCE0 /* JulietSpecs.swift */,
 				C1F8EE361E3FEB2100C7FCE0 /* Info.plist */,
 			);
 			path = JulietTests;
@@ -278,13 +278,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Juliet-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A117D0CB5739B7A1DF56A09 /* [CP] Check Pods Manifest.lock */ = {
@@ -293,13 +296,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JulietTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF9AF5B07C4B8A26C86A2AB2 /* [CP] Embed Pods Frameworks */ = {
@@ -308,9 +314,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JulietTests/Pods-JulietTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -335,7 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F8EE351E3FEB2100C7FCE0 /* JulietTests.swift in Sources */,
+				C1F8EE351E3FEB2100C7FCE0 /* JulietSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +517,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B49991879269D9918252BD3 /* Pods-JulietTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JulietTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rougebit.JulietTests;
@@ -519,7 +529,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5226B4EE828D23BB74041048 /* Pods-JulietTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JulietTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rougebit.JulietTests;
