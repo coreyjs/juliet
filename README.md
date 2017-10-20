@@ -10,6 +10,8 @@ iOS 10.3+
 
 Swift 3.1 +
 
+Want to learn Swift and help contribute? [Read Here](https://github.com/corey-rb/juliet/blob/master/CONTRIBUTING.md)
+
 ---
 
 Juliet is a simple, expandable logging library for iOS.  It is meant to allow easy logging of application data to any endpoint (stdout, http, etc).
