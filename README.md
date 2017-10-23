@@ -1,10 +1,16 @@
+<p align="center">
+  <img src="https://i.imgur.com/QsN5xYv.png" width="300px"/>
+</p>
+
+
 # Juliet (Alpha)
+A simple logging framework for iOS
 
 [![Build Status](https://travis-ci.org/corey-rb/juliet.svg?branch=master)](https://travis-ci.org/corey-rb/juliet)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Juliet.svg)](https://img.shields.io/cocoapods/v/Juliet.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Juliet.svg)](https://cocoapods.org/pods/Juliet)
 [![Platform](https://img.shields.io/cocoapods/p/Juliet.svg?style=flat)](http://cocoadocs.org/docsets/Juliet)
 
-A simple logging framework for iOS
+
 
 iOS 10.3+
 
@@ -40,10 +46,10 @@ Coming Soon.
 Coming Soon.
 
 
-Add import declaration 
+Add import declaration
 ```swift
  import Juliet
- 
+
  let julietLog = Logger(configuration: Configuration(
                         logLevels: [.warning, .alert, .error, .noerror, .fatal], composer: .console))
 ```
