@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://i.imgur.com/QsN5xYv.png" width="200px"/>
+  <img src="https://imgur.com/X3gdFcF.png" height="400px"/>
 </p>
-
 
 <h1 align="center"> Juliet (Alpha) </h1>
 
