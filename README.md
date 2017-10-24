@@ -24,8 +24,8 @@ Juliet is a simple, expandable logging library for iOS. It is meant to allow eas
 
 
 ## Features
-- [x]
-- [ ]
+- [x] Singleton Instantiation
+- [ ] [Complete Documentation](http://cocoadocs.org/docsets/Juliet)
 
 
 ## Requirements
