@@ -9,6 +9,8 @@
 [![License](https://img.shields.io/cocoapods/l/Juliet.svg?style=flat)](http://cocoadocs.org/docsets/Juliet)
 
 
+Deprecated
+--- 
 
 Juliet is a simple, expandable logging library for iOS. It is meant to allow easy logging of application data to any endpoint (stdout, http, etc).
 
